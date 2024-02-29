@@ -7,7 +7,7 @@
 
 using namespace std;
 
-bool is_permutation(string, string);
+bool is_permutation(string&, string&);
 
 int main() {
     string str1;
@@ -27,7 +27,7 @@ int main() {
     return 0;
 }
 
-bool is_permutation(string s, string t) {
+bool is_permutation(string& s, string& t) {
     if (s.length() != t.length())
         return false;
     unordered_map<char, int> char_count;
