@@ -5,32 +5,30 @@
 #include <iostream>
 #include <unordered_map>
 
-using namespace std;
-
-bool is_permutation(string&, string&);
+bool is_permutation(std::string&, std::string&);
 
 int main() {
-    string str1;
-    string str2;
-    cout << "Enter two strings: ";
-    cin >> str1;
-    cin >> str2;
-    cout << "String 1: " << str1 << endl;
-    cout << "String 2: " << str2 << endl;
+    std::string str1;
+    std::string str2;
+    std::cout << "Enter two strings: ";
+    std::cin >> str1;
+    std::cin >> str2;
+    std::cout << "String 1: " << str1 << std::endl;
+    std::cout << "String 2: " << str2 << std::endl;
 
     if (is_permutation(str1, str2))
-        cout << "Permutation";
+        std::cout << "Permutation";
     else
-        cout << "Not Permutation";
-    cout << endl;
+        std::cout << "Not Permutation";
+    std::cout << std::endl;
 
     return 0;
 }
 
-bool is_permutation(string& s, string& t) {
+bool is_permutation(std::string& s, std::string& t) {
     if (s.length() != t.length())
         return false;
-    unordered_map<char, int> char_count;
+    std::unordered_map<char, int> char_count;
     for (char c : s) {
         char_count[c]++;
     }

@@ -1,31 +1,28 @@
 //-----------------------------------------------------------------------------
 // Problem: Implement an algorithm to determine if a string has all unique
 // characters.
-//
-// Notes: Used a hash set.
 //-----------------------------------------------------------------------------
 
 #include <iostream>
 #include <unordered_set>
 
-using namespace std;
-
 int main() {
-    string input;
-    unordered_set<char> charSet;
+    std::string input;
+    std::unordered_set<char> charSet;
 
-    cout << "Enter string: ";
-    getline(cin, input);
-    cout << "You typed: " << input << endl;
+    std::cout << "Enter string: ";
+    std::getline(std::cin, input);
+    std::cout << "You typed: " << input << std::endl;
 
     for (char c : input) {
         if (charSet.contains(c)) {
-            cout << "Repeated character: " << c << endl;
+            std::cout << "Repeated character: " << c << std::endl;
             return 0;
         }
         charSet.insert(c);
     }
-    cout << "All unique characters" << endl;
+    std::cout << "All unique characters" << std::endl;
+
     return 0;
 }
 
